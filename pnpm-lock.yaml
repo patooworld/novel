@@ -95,7 +95,7 @@ importers:
     devDependencies:
       '@playwright/test':
         specifier: ^1.28.1
-        version: 1.37.1
+        version: 1.46.1
       '@sveltejs/adapter-auto':
         specifier: ^2.0.0
         version: 2.1.0(@sveltejs/kit@1.24.0(svelte@4.2.19)(vite@4.5.3(@types/node@20.5.8)))
@@ -170,7 +170,7 @@ importers:
         version: 4.5.3(@types/node@20.5.8)
       vitest:
         specifier: ^0.32.2
-        version: 0.32.4
+        version: 0.32.4(playwright@1.46.1)
 
 packages:
 
@@ -457,10 +457,9 @@ packages:
     resolution: {integrity: sha512-oGB+UxlgWcgQkgwo8GcEGwemoTFt3FIO9ababBmaGwXIoBKZ+GTy0pP185beGg7Llih/NSHSV2XAs1lnznocSg==}
     engines: {node: '>= 8'}
 
-  '@playwright/test@1.37.1':
-    resolution: {integrity: sha512-bq9zTli3vWJo8S3LwB91U0qDNQDpEXnw7knhxLM0nwDvexQAwx9tO8iKDZSqqneVq+URd/WIoz+BALMqUTgdSg==}
-    engines: {node: '>=16'}
-    deprecated: Please update to the latest version of Playwright to test up-to-date browsers.
+  '@playwright/test@1.46.1':
+    resolution: {integrity: sha512-Fq6SwLujA/DOIvNC2EL/SojJnkKf/rAwJ//APpJJHRyMi1PdKrY3Az+4XNQ51N4RTbItbIByQ0jgd1tayq1aeA==}
+    engines: {node: '>=18'}
     hasBin: true
 
   '@polka/url@1.0.0-next.21':
@@ -1815,9 +1814,14 @@ packages:
   pkg-types@1.0.3:
     resolution: {integrity: sha512-nN7pYi0AQqJnoLPC9eHFQ8AcyaixBUOwvqc5TDnIKCMEE6I0y8P7OKA7fPexsXGCGxQDl/cmrLAp26LhcwxZ4A==}
 
-  playwright-core@1.37.1:
-    resolution: {integrity: sha512-17EuQxlSIYCmEMwzMqusJ2ztDgJePjrbttaefgdsiqeLWidjYz9BxXaTaZWxH1J95SHGk6tjE+dwgWILJoUZfA==}
-    engines: {node: '>=16'}
+  playwright-core@1.46.1:
+    resolution: {integrity: sha512-h9LqIQaAv+CYvWzsZ+h3RsrqCStkBHlgo6/TJlFst3cOTlLghBQlJwPOZKQJTKNaD3QIB7aAVQ+gfWbN3NXB7A==}
+    engines: {node: '>=18'}
+    hasBin: true
+
+  playwright@1.46.1:
+    resolution: {integrity: sha512-oPcr1yqoXLCkgKtD5eNUPLiN40rYEM39odNpIb6VE6S7/15gJmA1NzVv6zJYusV0e7tzvkU/utBFNa/Kpxmwng==}
+    engines: {node: '>=18'}
     hasBin: true
 
   postcss-import@15.1.0:
@@ -2764,12 +2768,9 @@ snapshots:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.15.0
 
-  '@playwright/test@1.37.1':
+  '@playwright/test@1.46.1':
     dependencies:
-      '@types/node': 20.5.8
-      playwright-core: 1.37.1
-    optionalDependencies:
-      fsevents: 2.3.2
+      playwright: 1.46.1
 
   '@polka/url@1.0.0-next.21': {}
 
@@ -4265,7 +4266,13 @@ snapshots:
       mlly: 1.4.1
       pathe: 1.1.1
 
-  playwright-core@1.37.1: {}
+  playwright-core@1.46.1: {}
+
+  playwright@1.46.1:
+    dependencies:
+      playwright-core: 1.46.1
+    optionalDependencies:
+      fsevents: 2.3.2
 
   postcss-import@15.1.0(postcss@8.4.39):
     dependencies:
@@ -4911,7 +4918,7 @@ snapshots:
     optionalDependencies:
       vite: 4.5.3(@types/node@20.5.8)
 
-  vitest@0.32.4:
+  vitest@0.32.4(playwright@1.46.1):
     dependencies:
       '@types/chai': 4.3.5
       '@types/chai-subset': 1.3.3
@@ -4937,6 +4944,8 @@ snapshots:
       vite: 4.5.3(@types/node@20.5.8)
       vite-node: 0.32.4(@types/node@20.5.8)
       why-is-node-running: 2.2.2
+    optionalDependencies:
+      playwright: 1.46.1
     transitivePeerDependencies:
       - less
       - lightningcss

@@ -145,8 +145,8 @@ importers:
         specifier: ^2.10.1
         version: 2.10.1(prettier@2.8.8)(svelte@4.2.19)
       publint:
-        specifier: ^0.1.9
-        version: 0.1.16
+        specifier: ^0.2.0
+        version: 0.2.10
       svelte:
         specifier: ^4.0.5
         version: 4.2.19
@@ -2033,8 +2033,8 @@ packages:
   prosemirror-view@1.31.7:
     resolution: {integrity: sha512-Pr7w93yOYmxQwzGIRSaNLZ/1uM6YjnenASzN2H6fO6kGekuzRbgZ/4bHbBTd1u4sIQmL33/TcGmzxxidyPwCjg==}
 
-  publint@0.1.16:
-    resolution: {integrity: sha512-wJgk7HnXDT5Ap0DjFYbGz78kPkN44iQvDiaq8P63IEEyNU9mYXvaMd2cAyIM6OgqXM/IA3CK6XWIsRq+wjNpgw==}
+  publint@0.2.10:
+    resolution: {integrity: sha512-5TzYaAFiGpgkYX/k6VaItRMT2uHI4zO5OWJ2k7Er0Ot3jutBCNTJB1qRHuy1lYq07JhRczzFs6HFPB4D+A47xA==}
     engines: {node: '>=16'}
     hasBin: true
 
@@ -4445,7 +4445,7 @@ snapshots:
       prosemirror-state: 1.4.3
       prosemirror-transform: 1.7.5
 
-  publint@0.1.16:
+  publint@0.2.10:
     dependencies:
       npm-packlist: 5.1.3
       picocolors: 1.0.1

@@ -79,7 +79,7 @@
 		"@tiptap/pm": "^2.1.7",
 		"@tiptap/starter-kit": "^2.1.7",
 		"@tiptap/suggestion": "^2.0.4",
-		"ai": "^2.2.11",
+		"ai": "^5.0.0",
 		"cal-sans": "^1.0.1",
 		"clsx": "^2.0.0",
 		"lucide-svelte": "0.275.0-beta.0",
